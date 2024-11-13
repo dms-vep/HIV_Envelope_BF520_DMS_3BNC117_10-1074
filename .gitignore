@@ -49,3 +49,14 @@ results/antibody_escape/*
 !results/antibody_escape/by_selection
 results/antibody_escape/by_selection/*.pickle
 results/antibody_escape/by_selection/*.csv
+
+!results/dms-viz
+!results/dms-viz/*
+!results/escape_PDBs
+!results/escape_PDBs/*
+!results/logoplots
+!results/logoplots/*
+!results/trees
+!results/trees/*
+!results/heatmaps
+!results/heatmaps/*
