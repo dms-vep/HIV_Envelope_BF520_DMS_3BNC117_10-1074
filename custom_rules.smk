@@ -135,6 +135,41 @@ rule plot_average_func_scores:
             &> {log}
         """
 
+rule format_func_effects_dms_viz:
+    """Format the data for functional effects for input into dms-viz"""
+    input:
+        site_map="data/site_numbering_map.csv",
+        functional_data="results/func_effects/averages/TZM-bl_entry_func_effects_references_sites.csv",
+        input_pdb_file="data/PDBs/6UDJ.pdb",
+    output: 
+        output_json_file_name = os.path.join("results/dms-viz/BF520_functional_effects.json"),
+    params:
+        env_chains = Env_chains_by_pdb['6UDJ.pdb'],
+        exclude_chains = 'D N H E O I B L R A K Q',
+        name="functional_effects",
+    log:
+        os.path.join("results/logs/", "dms-viz_file_functional_effects.txt"),
+    conda:
+        "dms-viz.yml"
+    shell:
+        """
+        configure-dms-viz format \
+            --name {params.name} \
+            --input {input.functional_data} \
+            --metric  "effect" \
+            --metric-name "Functional Effect" \
+            --exclude-amino-acids "*, -" \
+            --structure {input.input_pdb_file} \
+            --sitemap {input.site_map} \
+            --output {output.output_json_file_name} \
+            --included-chains "{params.env_chains}" \
+            --excluded-chains "{params.exclude_chains}" \
+            --tooltip-cols "{{'times_seen': '# Obsv'}}" \
+            --filter-cols "{{'times_seen': 'Times Seen'}}" \
+            --filter-limits "{{'times_seen': [0, 2, 10]}}" \
+            &> {log}
+        """
+
 rule logo_plots:
     """Make logo plots for antibody escape."""
     input:
@@ -168,3 +203,5 @@ for file in expand(rules.format_dms_viz.output.output_json_file_name, antibody=a
 for file in expand(rules.color_PDB_structures.output.output_pdb_file_name, antibody=antibody_gv, assay='antibody_escape'):
     other_target_files.append(file)
 other_target_files.append("results/notebooks/logoplots.ipynb") 
+other_target_files.append("results/dms-viz/BF520_functional_effects.json")
+

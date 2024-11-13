@@ -1,6 +1,6 @@
-<h1 id="deep-mutational-scanning-using-hiv-envelope-strain-bf520-analysis-uses-dms-vep-pipeline-3">Deep mutational scanning using HIV Envelope strain BF520. Analysis uses dms-vep-pipeline-3</h1>
-<p>Analysis by Caelan Radford and Jesse Bloom (2023)</p>
-<p>See <a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3">https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3</a> for full code.</p>
+<h1 id="deep-mutational-scanning-using-hiv-envelope-strain-bf520-to-identify-mutations-that-escape-neutralization-by-antibodies-3bnc117-and-10-1074">Deep mutational scanning using HIV Envelope strain BF520 to identify mutations that escape neutralization by antibodies 3BNC117 and 10-1074</h1>
+<p>Analysis by Caelan Radford and Jesse Bloom (2024)</p>
+<p>See <a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/">https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/</a> for full code.</p>
 <div class="toc"><span class="toctitle">Contents</span><ul>
 <li><a href="#barcode-to-codon-variant-lookup-table">Barcode to codon-variant lookup table</a></li>
 <li><a href="#count-barcodes-for-variants">Count barcodes for variants</a></li>
@@ -13,9 +13,9 @@
 <h2 id="barcode-to-codon-variant-lookup-table">Barcode to codon-variant lookup table</h2>
 <h4 id="data-files">Data files</h4>
 <ul>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/gene_sequence/codon.fasta">parental codon sequence</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/gene_sequence/protein.fasta">parental protein sequence</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/variants/codon_variants.csv">barcode to codon-variant lookup table</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/gene_sequence/codon.fasta">parental codon sequence</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/gene_sequence/protein.fasta">parental protein sequence</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/variants/codon_variants.csv">barcode to codon-variant lookup table</a></li>
 </ul>
 <h2 id="count-barcodes-for-variants">Count barcodes for variants</h2>
 <h4 id="analysis-notebooks">Analysis notebooks</h4>
@@ -23,83 +23,83 @@
 <ul>
 <li><details><summary>Barcode count CSVs (click triangle to expand/collapse)</summary><ul>
 
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/A-220720-rescue_2-no_antibody-1_counts.csv">A-220720-rescue_2-no_antibody-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/A-220720-rescue_2-no_antibody-2_counts.csv">A-220720-rescue_2-no_antibody-2</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/A-220720-rescue_2-no_antibody-3_counts.csv">A-220720-rescue_2-no_antibody-3</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/A-220720-rescue_2-VSVG-1_counts.csv">A-220720-rescue_2-VSVG-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/A-220720-rescue_2-VSVG-2_counts.csv">A-220720-rescue_2-VSVG-2</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/A-220804-rescue_1-no_antibody-1_counts.csv">A-220804-rescue_1-no_antibody-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/A-220804-rescue_1-no_antibody-2_counts.csv">A-220804-rescue_1-no_antibody-2</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/A-220804-rescue_1-10-1074-40.0-1_counts.csv">A-220804-rescue_1-10-1074-40.0-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/A-220804-rescue_1-10-1074-20.0-1_counts.csv">A-220804-rescue_1-10-1074-20.0-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/A-220804-rescue_1-10-1074-20.0-2_counts.csv">A-220804-rescue_1-10-1074-20.0-2</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/A-220804-rescue_1-10-1074-10.0-1_counts.csv">A-220804-rescue_1-10-1074-10.0-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/A-220804-rescue_1-3BNC117-5.0-1_counts.csv">A-220804-rescue_1-3BNC117-5.0-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/A-220804-rescue_1-3BNC117-2.5-1_counts.csv">A-220804-rescue_1-3BNC117-2.5-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/A-220804-rescue_1-3BNC117-1.25-1_counts.csv">A-220804-rescue_1-3BNC117-1.25-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/A-220804-rescue_1-VSVG-1_counts.csv">A-220804-rescue_1-VSVG-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/A-220804-rescue_1-VSVG-2_counts.csv">A-220804-rescue_1-VSVG-2</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/B-220804-rescue_2-no_antibody-1_counts.csv">B-220804-rescue_2-no_antibody-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/B-220804-rescue_2-no_antibody-2_counts.csv">B-220804-rescue_2-no_antibody-2</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/B-220804-rescue_2-VSVG-1_counts.csv">B-220804-rescue_2-VSVG-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/B-220804-rescue_2-VSVG-2_counts.csv">B-220804-rescue_2-VSVG-2</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/A-220901-rescue_3-no_antibody-1_counts.csv">A-220901-rescue_3-no_antibody-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/A-220901-rescue_3-no_antibody-2_counts.csv">A-220901-rescue_3-no_antibody-2</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/A-220901-rescue_3-VSVG-1_counts.csv">A-220901-rescue_3-VSVG-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/B-220912-rescue_1-no_antibody-1_counts.csv">B-220912-rescue_1-no_antibody-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/B-220912-rescue_1-10-1074-80.0-1_counts.csv">B-220912-rescue_1-10-1074-80.0-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/B-220912-rescue_1-10-1074-40.0-1_counts.csv">B-220912-rescue_1-10-1074-40.0-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/B-220912-rescue_1-10-1074-20.0-1_counts.csv">B-220912-rescue_1-10-1074-20.0-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/B-220912-rescue_1-3BNC117-40.0-1_counts.csv">B-220912-rescue_1-3BNC117-40.0-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/B-220912-rescue_1-3BNC117-20.0-1_counts.csv">B-220912-rescue_1-3BNC117-20.0-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/B-220912-rescue_1-3BNC117-10.0-1_counts.csv">B-220912-rescue_1-3BNC117-10.0-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/B-220912-rescue_1-VSVG-1_counts.csv">B-220912-rescue_1-VSVG-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/A-220927-rescue_3-no_antibody-1_counts.csv">A-220927-rescue_3-no_antibody-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/B-220927-rescue_3-no_antibody-1_counts.csv">B-220927-rescue_3-no_antibody-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/B-220927-rescue_3-no_antibody-2_counts.csv">B-220927-rescue_3-no_antibody-2</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/A-220927-rescue_3-VSVG-1_counts.csv">A-220927-rescue_3-VSVG-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/B-220927-rescue_3-VSVG-1_counts.csv">B-220927-rescue_3-VSVG-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/B-221011-rescue_4-no_antibody-1_counts.csv">B-221011-rescue_4-no_antibody-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/B-221011-rescue_4-no_antibody-2_counts.csv">B-221011-rescue_4-no_antibody-2</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/B-221011-rescue_4-3BNC117-5.0-1_counts.csv">B-221011-rescue_4-3BNC117-5.0-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/B-221011-rescue_4-3BNC117-7.5-1_counts.csv">B-221011-rescue_4-3BNC117-7.5-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/B-221011-rescue_4-3BNC117-10.0-1_counts.csv">B-221011-rescue_4-3BNC117-10.0-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/B-221011-rescue_4-10-1074-10.0-1_counts.csv">B-221011-rescue_4-10-1074-10.0-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/B-221011-rescue_4-10-1074-20.0-1_counts.csv">B-221011-rescue_4-10-1074-20.0-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/B-221011-rescue_4-10-1074-40.0-1_counts.csv">B-221011-rescue_4-10-1074-40.0-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/A-221017-rescue_4-no_antibody-1_counts.csv">A-221017-rescue_4-no_antibody-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/A-221017-rescue_4-no_antibody-2_counts.csv">A-221017-rescue_4-no_antibody-2</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/A-221017-rescue_4-3BNC117-1.0-1_counts.csv">A-221017-rescue_4-3BNC117-1.0-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/A-221017-rescue_4-3BNC117-2.0-1_counts.csv">A-221017-rescue_4-3BNC117-2.0-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/A-221017-rescue_4-3BNC117-3.0-1_counts.csv">A-221017-rescue_4-3BNC117-3.0-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/A-221017-rescue_4-VSVG-1_counts.csv">A-221017-rescue_4-VSVG-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/A-230223-rescue_5-no_antibody-1_counts.csv">A-230223-rescue_5-no_antibody-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/A-230223-rescue_5-no_antibody-2_counts.csv">A-230223-rescue_5-no_antibody-2</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/B-230306-rescue_5-no_antibody-1_counts.csv">B-230306-rescue_5-no_antibody-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/B-230306-rescue_5-no_antibody-2_counts.csv">B-230306-rescue_5-no_antibody-2</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/B-230413-rescue_7-no_antibody-1_counts.csv">B-230413-rescue_7-no_antibody-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/B-230413-rescue_7-no_antibody-2_counts.csv">B-230413-rescue_7-no_antibody-2</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/B-230413-rescue_7-VSVG-1_counts.csv">B-230413-rescue_7-VSVG-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/A-230622-TZM-bl-no_antibody-1_counts.csv">A-230622-TZM-bl-no_antibody-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/A-230622-TZM-bl-no_antibody-2_counts.csv">A-230622-TZM-bl-no_antibody-2</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/A-230622-TZM-bl-VSVG-1_counts.csv">A-230622-TZM-bl-VSVG-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/A-230622-TZM-bl-VSVG-2_counts.csv">A-230622-TZM-bl-VSVG-2</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/B-230627-TZM-bl-no_antibody-1_counts.csv">B-230627-TZM-bl-no_antibody-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/B-230627-TZM-bl-no_antibody-2_counts.csv">B-230627-TZM-bl-no_antibody-2</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/B-230627-TZM-bl-VSVG-1_counts.csv">B-230627-TZM-bl-VSVG-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/A-230719-rescue_7-no_antibody-1_counts.csv">A-230719-rescue_7-no_antibody-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/A-230719-rescue_7-no_antibody-2_counts.csv">A-230719-rescue_7-no_antibody-2</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/A-230719-rescue_7-VSVG-1_counts.csv">A-230719-rescue_7-VSVG-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/B-230831-rescue_6-no_antibody-1_counts.csv">B-230831-rescue_6-no_antibody-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/B-230831-rescue_6-no_antibody-2_counts.csv">B-230831-rescue_6-no_antibody-2</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/A-231207-rescue_8-no_antibody-1_counts.csv">A-231207-rescue_8-no_antibody-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/A-231207-rescue_8-no_antibody-2_counts.csv">A-231207-rescue_8-no_antibody-2</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/B-231207-rescue_6-no_antibody-1_counts.csv">B-231207-rescue_6-no_antibody-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/B-231207-rescue_6-no_antibody-2_counts.csv">B-231207-rescue_6-no_antibody-2</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/B-240105-rescue_7-no_antibody-1_counts.csv">B-240105-rescue_7-no_antibody-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/B-240105-rescue_7-3BNC117-1.0-1_counts.csv">B-240105-rescue_7-3BNC117-1.0-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/B-240105-rescue_7-3BNC117-3.0-1_counts.csv">B-240105-rescue_7-3BNC117-3.0-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/barcode_counts/B-240105-rescue_7-3BNC117-9.0-1_counts.csv">B-240105-rescue_7-3BNC117-9.0-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/A-220720-rescue_2-no_antibody-1_counts.csv">A-220720-rescue_2-no_antibody-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/A-220720-rescue_2-no_antibody-2_counts.csv">A-220720-rescue_2-no_antibody-2</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/A-220720-rescue_2-no_antibody-3_counts.csv">A-220720-rescue_2-no_antibody-3</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/A-220720-rescue_2-VSVG-1_counts.csv">A-220720-rescue_2-VSVG-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/A-220720-rescue_2-VSVG-2_counts.csv">A-220720-rescue_2-VSVG-2</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/A-220804-rescue_1-no_antibody-1_counts.csv">A-220804-rescue_1-no_antibody-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/A-220804-rescue_1-no_antibody-2_counts.csv">A-220804-rescue_1-no_antibody-2</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/A-220804-rescue_1-10-1074-40.0-1_counts.csv">A-220804-rescue_1-10-1074-40.0-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/A-220804-rescue_1-10-1074-20.0-1_counts.csv">A-220804-rescue_1-10-1074-20.0-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/A-220804-rescue_1-10-1074-20.0-2_counts.csv">A-220804-rescue_1-10-1074-20.0-2</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/A-220804-rescue_1-10-1074-10.0-1_counts.csv">A-220804-rescue_1-10-1074-10.0-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/A-220804-rescue_1-3BNC117-5.0-1_counts.csv">A-220804-rescue_1-3BNC117-5.0-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/A-220804-rescue_1-3BNC117-2.5-1_counts.csv">A-220804-rescue_1-3BNC117-2.5-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/A-220804-rescue_1-3BNC117-1.25-1_counts.csv">A-220804-rescue_1-3BNC117-1.25-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/A-220804-rescue_1-VSVG-1_counts.csv">A-220804-rescue_1-VSVG-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/A-220804-rescue_1-VSVG-2_counts.csv">A-220804-rescue_1-VSVG-2</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/B-220804-rescue_2-no_antibody-1_counts.csv">B-220804-rescue_2-no_antibody-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/B-220804-rescue_2-no_antibody-2_counts.csv">B-220804-rescue_2-no_antibody-2</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/B-220804-rescue_2-VSVG-1_counts.csv">B-220804-rescue_2-VSVG-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/B-220804-rescue_2-VSVG-2_counts.csv">B-220804-rescue_2-VSVG-2</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/A-220901-rescue_3-no_antibody-1_counts.csv">A-220901-rescue_3-no_antibody-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/A-220901-rescue_3-no_antibody-2_counts.csv">A-220901-rescue_3-no_antibody-2</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/A-220901-rescue_3-VSVG-1_counts.csv">A-220901-rescue_3-VSVG-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/B-220912-rescue_1-no_antibody-1_counts.csv">B-220912-rescue_1-no_antibody-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/B-220912-rescue_1-10-1074-80.0-1_counts.csv">B-220912-rescue_1-10-1074-80.0-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/B-220912-rescue_1-10-1074-40.0-1_counts.csv">B-220912-rescue_1-10-1074-40.0-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/B-220912-rescue_1-10-1074-20.0-1_counts.csv">B-220912-rescue_1-10-1074-20.0-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/B-220912-rescue_1-3BNC117-40.0-1_counts.csv">B-220912-rescue_1-3BNC117-40.0-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/B-220912-rescue_1-3BNC117-20.0-1_counts.csv">B-220912-rescue_1-3BNC117-20.0-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/B-220912-rescue_1-3BNC117-10.0-1_counts.csv">B-220912-rescue_1-3BNC117-10.0-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/B-220912-rescue_1-VSVG-1_counts.csv">B-220912-rescue_1-VSVG-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/A-220927-rescue_3-no_antibody-1_counts.csv">A-220927-rescue_3-no_antibody-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/B-220927-rescue_3-no_antibody-1_counts.csv">B-220927-rescue_3-no_antibody-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/B-220927-rescue_3-no_antibody-2_counts.csv">B-220927-rescue_3-no_antibody-2</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/A-220927-rescue_3-VSVG-1_counts.csv">A-220927-rescue_3-VSVG-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/B-220927-rescue_3-VSVG-1_counts.csv">B-220927-rescue_3-VSVG-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/B-221011-rescue_4-no_antibody-1_counts.csv">B-221011-rescue_4-no_antibody-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/B-221011-rescue_4-no_antibody-2_counts.csv">B-221011-rescue_4-no_antibody-2</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/B-221011-rescue_4-3BNC117-5.0-1_counts.csv">B-221011-rescue_4-3BNC117-5.0-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/B-221011-rescue_4-3BNC117-7.5-1_counts.csv">B-221011-rescue_4-3BNC117-7.5-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/B-221011-rescue_4-3BNC117-10.0-1_counts.csv">B-221011-rescue_4-3BNC117-10.0-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/B-221011-rescue_4-10-1074-10.0-1_counts.csv">B-221011-rescue_4-10-1074-10.0-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/B-221011-rescue_4-10-1074-20.0-1_counts.csv">B-221011-rescue_4-10-1074-20.0-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/B-221011-rescue_4-10-1074-40.0-1_counts.csv">B-221011-rescue_4-10-1074-40.0-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/A-221017-rescue_4-no_antibody-1_counts.csv">A-221017-rescue_4-no_antibody-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/A-221017-rescue_4-no_antibody-2_counts.csv">A-221017-rescue_4-no_antibody-2</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/A-221017-rescue_4-3BNC117-1.0-1_counts.csv">A-221017-rescue_4-3BNC117-1.0-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/A-221017-rescue_4-3BNC117-2.0-1_counts.csv">A-221017-rescue_4-3BNC117-2.0-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/A-221017-rescue_4-3BNC117-3.0-1_counts.csv">A-221017-rescue_4-3BNC117-3.0-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/A-221017-rescue_4-VSVG-1_counts.csv">A-221017-rescue_4-VSVG-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/A-230223-rescue_5-no_antibody-1_counts.csv">A-230223-rescue_5-no_antibody-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/A-230223-rescue_5-no_antibody-2_counts.csv">A-230223-rescue_5-no_antibody-2</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/B-230306-rescue_5-no_antibody-1_counts.csv">B-230306-rescue_5-no_antibody-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/B-230306-rescue_5-no_antibody-2_counts.csv">B-230306-rescue_5-no_antibody-2</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/B-230413-rescue_7-no_antibody-1_counts.csv">B-230413-rescue_7-no_antibody-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/B-230413-rescue_7-no_antibody-2_counts.csv">B-230413-rescue_7-no_antibody-2</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/B-230413-rescue_7-VSVG-1_counts.csv">B-230413-rescue_7-VSVG-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/A-230622-TZM-bl-no_antibody-1_counts.csv">A-230622-TZM-bl-no_antibody-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/A-230622-TZM-bl-no_antibody-2_counts.csv">A-230622-TZM-bl-no_antibody-2</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/A-230622-TZM-bl-VSVG-1_counts.csv">A-230622-TZM-bl-VSVG-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/A-230622-TZM-bl-VSVG-2_counts.csv">A-230622-TZM-bl-VSVG-2</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/B-230627-TZM-bl-no_antibody-1_counts.csv">B-230627-TZM-bl-no_antibody-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/B-230627-TZM-bl-no_antibody-2_counts.csv">B-230627-TZM-bl-no_antibody-2</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/B-230627-TZM-bl-VSVG-1_counts.csv">B-230627-TZM-bl-VSVG-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/A-230719-rescue_7-no_antibody-1_counts.csv">A-230719-rescue_7-no_antibody-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/A-230719-rescue_7-no_antibody-2_counts.csv">A-230719-rescue_7-no_antibody-2</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/A-230719-rescue_7-VSVG-1_counts.csv">A-230719-rescue_7-VSVG-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/B-230831-rescue_6-no_antibody-1_counts.csv">B-230831-rescue_6-no_antibody-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/B-230831-rescue_6-no_antibody-2_counts.csv">B-230831-rescue_6-no_antibody-2</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/A-231207-rescue_8-no_antibody-1_counts.csv">A-231207-rescue_8-no_antibody-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/A-231207-rescue_8-no_antibody-2_counts.csv">A-231207-rescue_8-no_antibody-2</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/B-231207-rescue_6-no_antibody-1_counts.csv">B-231207-rescue_6-no_antibody-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/B-231207-rescue_6-no_antibody-2_counts.csv">B-231207-rescue_6-no_antibody-2</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/B-240105-rescue_7-no_antibody-1_counts.csv">B-240105-rescue_7-no_antibody-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/B-240105-rescue_7-3BNC117-1.0-1_counts.csv">B-240105-rescue_7-3BNC117-1.0-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/B-240105-rescue_7-3BNC117-3.0-1_counts.csv">B-240105-rescue_7-3BNC117-3.0-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/barcode_counts/B-240105-rescue_7-3BNC117-9.0-1_counts.csv">B-240105-rescue_7-3BNC117-9.0-1</a></li>
 </ul></details>
 
 </li>
@@ -156,57 +156,57 @@
 <ul>
 <li><details><summary>Per-variant functional score CSVs (click triangle to expand/collapse)</summary><ul>
 
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/func_scores/A-220720-1-1_func_scores.csv">A-220720-1-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/func_scores/A-220720-2-2_func_scores.csv">A-220720-2-2</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/func_scores/A-220804-1-1_func_scores.csv">A-220804-1-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/func_scores/A-220804-2-2_func_scores.csv">A-220804-2-2</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/func_scores/A-220901-1-1_func_scores.csv">A-220901-1-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/func_scores/A-220927-1-1_func_scores.csv">A-220927-1-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/func_scores/A-221017-1-1_func_scores.csv">A-221017-1-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/func_scores/B-220804-1-1_func_scores.csv">B-220804-1-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/func_scores/B-220804-2-2_func_scores.csv">B-220804-2-2</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/func_scores/B-220912-1-1_func_scores.csv">B-220912-1-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/func_scores/B-220927-1-1_func_scores.csv">B-220927-1-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/func_scores/B-230413-1-1_func_scores.csv">B-230413-1-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/func_scores/A-230622-TZM_bl-1-1_func_scores.csv">A-230622-TZM_bl-1-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/func_scores/A-230622-TZM_bl-2-2_func_scores.csv">A-230622-TZM_bl-2-2</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/func_scores/B-230627-TZM_bl-1-1_func_scores.csv">B-230627-TZM_bl-1-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/func_scores/B-230627-TZM_bl-2-1_func_scores.csv">B-230627-TZM_bl-2-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/func_scores/A-230719-1-1_func_scores.csv">A-230719-1-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/func_scores/A-220720-1-1_func_scores.csv">A-220720-1-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/func_scores/A-220720-2-2_func_scores.csv">A-220720-2-2</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/func_scores/A-220804-1-1_func_scores.csv">A-220804-1-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/func_scores/A-220804-2-2_func_scores.csv">A-220804-2-2</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/func_scores/A-220901-1-1_func_scores.csv">A-220901-1-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/func_scores/A-220927-1-1_func_scores.csv">A-220927-1-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/func_scores/A-221017-1-1_func_scores.csv">A-221017-1-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/func_scores/B-220804-1-1_func_scores.csv">B-220804-1-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/func_scores/B-220804-2-2_func_scores.csv">B-220804-2-2</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/func_scores/B-220912-1-1_func_scores.csv">B-220912-1-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/func_scores/B-220927-1-1_func_scores.csv">B-220927-1-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/func_scores/B-230413-1-1_func_scores.csv">B-230413-1-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/func_scores/A-230622-TZM_bl-1-1_func_scores.csv">A-230622-TZM_bl-1-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/func_scores/A-230622-TZM_bl-2-2_func_scores.csv">A-230622-TZM_bl-2-2</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/func_scores/B-230627-TZM_bl-1-1_func_scores.csv">B-230627-TZM_bl-1-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/func_scores/B-230627-TZM_bl-2-1_func_scores.csv">B-230627-TZM_bl-2-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/func_scores/A-230719-1-1_func_scores.csv">A-230719-1-1</a></li>
 </ul></details>
 
 </li>
 <li><details><summary>Per-selection mutation functional effect CSVs (click triangle to expand/collapse)</summary><ul>
 
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/func_effects/by_selection/A-220720-1-1_func_effects.csv">A-220720-1-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/func_effects/by_selection/A-220720-2-2_func_effects.csv">A-220720-2-2</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/func_effects/by_selection/A-220804-1-1_func_effects.csv">A-220804-1-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/func_effects/by_selection/A-220804-2-2_func_effects.csv">A-220804-2-2</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/func_effects/by_selection/A-220901-1-1_func_effects.csv">A-220901-1-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/func_effects/by_selection/A-220927-1-1_func_effects.csv">A-220927-1-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/func_effects/by_selection/A-221017-1-1_func_effects.csv">A-221017-1-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/func_effects/by_selection/B-220804-1-1_func_effects.csv">B-220804-1-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/func_effects/by_selection/B-220804-2-2_func_effects.csv">B-220804-2-2</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/func_effects/by_selection/B-220912-1-1_func_effects.csv">B-220912-1-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/func_effects/by_selection/B-220927-1-1_func_effects.csv">B-220927-1-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/func_effects/by_selection/B-230413-1-1_func_effects.csv">B-230413-1-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/func_effects/by_selection/A-230622-TZM_bl-1-1_func_effects.csv">A-230622-TZM_bl-1-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/func_effects/by_selection/A-230622-TZM_bl-2-2_func_effects.csv">A-230622-TZM_bl-2-2</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/func_effects/by_selection/B-230627-TZM_bl-1-1_func_effects.csv">B-230627-TZM_bl-1-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/func_effects/by_selection/B-230627-TZM_bl-2-1_func_effects.csv">B-230627-TZM_bl-2-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/func_effects/by_selection/A-230719-1-1_func_effects.csv">A-230719-1-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/func_effects/by_selection/A-220720-1-1_func_effects.csv">A-220720-1-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/func_effects/by_selection/A-220720-2-2_func_effects.csv">A-220720-2-2</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/func_effects/by_selection/A-220804-1-1_func_effects.csv">A-220804-1-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/func_effects/by_selection/A-220804-2-2_func_effects.csv">A-220804-2-2</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/func_effects/by_selection/A-220901-1-1_func_effects.csv">A-220901-1-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/func_effects/by_selection/A-220927-1-1_func_effects.csv">A-220927-1-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/func_effects/by_selection/A-221017-1-1_func_effects.csv">A-221017-1-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/func_effects/by_selection/B-220804-1-1_func_effects.csv">B-220804-1-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/func_effects/by_selection/B-220804-2-2_func_effects.csv">B-220804-2-2</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/func_effects/by_selection/B-220912-1-1_func_effects.csv">B-220912-1-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/func_effects/by_selection/B-220927-1-1_func_effects.csv">B-220927-1-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/func_effects/by_selection/B-230413-1-1_func_effects.csv">B-230413-1-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/func_effects/by_selection/A-230622-TZM_bl-1-1_func_effects.csv">A-230622-TZM_bl-1-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/func_effects/by_selection/A-230622-TZM_bl-2-2_func_effects.csv">A-230622-TZM_bl-2-2</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/func_effects/by_selection/B-230627-TZM_bl-1-1_func_effects.csv">B-230627-TZM_bl-1-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/func_effects/by_selection/B-230627-TZM_bl-2-1_func_effects.csv">B-230627-TZM_bl-2-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/func_effects/by_selection/A-230719-1-1_func_effects.csv">A-230719-1-1</a></li>
 </ul></details>
 
 </li>
 <li><details><summary>Average mutation functional effects (CSV files) (click triangle to expand/collapse)</summary><ul>
 
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/func_effects/averages/TZM-bl_entry_func_effects.csv">TZM-bl_entry</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/func_effects/averages/TZM-bl_entry_func_effects.csv">TZM-bl_entry</a></li>
 </ul></details>
 
 </li>
 <li><details><summary>Average mutation latent-phenotype effects (CSV files) (click triangle to expand/collapse)</summary><ul>
 
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/func_effects/averages/TZM-bl_entry_func_effects.csv">TZM-bl_entry</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/func_effects/averages/TZM-bl_entry_func_effects.csv">TZM-bl_entry</a></li>
 </ul></details>
 
 </li>
@@ -248,32 +248,32 @@
 <ul>
 <li><details><summary>Probability (fraction) escape for each variant in each antibody escape selection (CSVs) (click triangle to expand/collapse)</summary><ul>
 
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/antibody_escape/by_selection/A-220804-rescue_1-10-1074-1/A-220804-rescue_1-10-1074-40.0-1_prob_escape.csv">A-220804-rescue_1-10-1074-1 A-220804-rescue_1-10-1074-40.0-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/antibody_escape/by_selection/A-220804-rescue_1-10-1074-1/A-220804-rescue_1-10-1074-20.0-1_prob_escape.csv">A-220804-rescue_1-10-1074-1 A-220804-rescue_1-10-1074-20.0-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/antibody_escape/by_selection/A-220804-rescue_1-10-1074-1/A-220804-rescue_1-10-1074-10.0-1_prob_escape.csv">A-220804-rescue_1-10-1074-1 A-220804-rescue_1-10-1074-10.0-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/antibody_escape/by_selection/A-220804-rescue_1-10-1074-2/A-220804-rescue_1-10-1074-20.0-2_prob_escape.csv">A-220804-rescue_1-10-1074-2 A-220804-rescue_1-10-1074-20.0-2</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/antibody_escape/by_selection/B-220912-rescue_1-10-1074-1/B-220912-rescue_1-10-1074-80.0-1_prob_escape.csv">B-220912-rescue_1-10-1074-1 B-220912-rescue_1-10-1074-80.0-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/antibody_escape/by_selection/B-220912-rescue_1-10-1074-1/B-220912-rescue_1-10-1074-40.0-1_prob_escape.csv">B-220912-rescue_1-10-1074-1 B-220912-rescue_1-10-1074-40.0-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/antibody_escape/by_selection/B-220912-rescue_1-10-1074-1/B-220912-rescue_1-10-1074-20.0-1_prob_escape.csv">B-220912-rescue_1-10-1074-1 B-220912-rescue_1-10-1074-20.0-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/antibody_escape/by_selection/B-221011-rescue_4-10-1074-1/B-221011-rescue_4-10-1074-10.0-1_prob_escape.csv">B-221011-rescue_4-10-1074-1 B-221011-rescue_4-10-1074-10.0-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/antibody_escape/by_selection/B-221011-rescue_4-10-1074-1/B-221011-rescue_4-10-1074-20.0-1_prob_escape.csv">B-221011-rescue_4-10-1074-1 B-221011-rescue_4-10-1074-20.0-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/antibody_escape/by_selection/B-221011-rescue_4-10-1074-1/B-221011-rescue_4-10-1074-40.0-1_prob_escape.csv">B-221011-rescue_4-10-1074-1 B-221011-rescue_4-10-1074-40.0-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/antibody_escape/by_selection/A-220804-rescue_1-3BNC117-1/A-220804-rescue_1-3BNC117-5.0-1_prob_escape.csv">A-220804-rescue_1-3BNC117-1 A-220804-rescue_1-3BNC117-5.0-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/antibody_escape/by_selection/A-220804-rescue_1-3BNC117-1/A-220804-rescue_1-3BNC117-2.5-1_prob_escape.csv">A-220804-rescue_1-3BNC117-1 A-220804-rescue_1-3BNC117-2.5-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/antibody_escape/by_selection/A-220804-rescue_1-3BNC117-1/A-220804-rescue_1-3BNC117-1.25-1_prob_escape.csv">A-220804-rescue_1-3BNC117-1 A-220804-rescue_1-3BNC117-1.25-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/antibody_escape/by_selection/A-221017-rescue_4-3BNC117-1/A-221017-rescue_4-3BNC117-1.0-1_prob_escape.csv">A-221017-rescue_4-3BNC117-1 A-221017-rescue_4-3BNC117-1.0-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/antibody_escape/by_selection/A-221017-rescue_4-3BNC117-1/A-221017-rescue_4-3BNC117-2.0-1_prob_escape.csv">A-221017-rescue_4-3BNC117-1 A-221017-rescue_4-3BNC117-2.0-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/antibody_escape/by_selection/A-221017-rescue_4-3BNC117-1/A-221017-rescue_4-3BNC117-3.0-1_prob_escape.csv">A-221017-rescue_4-3BNC117-1 A-221017-rescue_4-3BNC117-3.0-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/antibody_escape/by_selection/B-240105-rescue_7-3BNC117-1/B-240105-rescue_7-3BNC117-1.0-1_prob_escape.csv">B-240105-rescue_7-3BNC117-1 B-240105-rescue_7-3BNC117-1.0-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/antibody_escape/by_selection/B-240105-rescue_7-3BNC117-1/B-240105-rescue_7-3BNC117-3.0-1_prob_escape.csv">B-240105-rescue_7-3BNC117-1 B-240105-rescue_7-3BNC117-3.0-1</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/antibody_escape/by_selection/B-240105-rescue_7-3BNC117-1/B-240105-rescue_7-3BNC117-9.0-1_prob_escape.csv">B-240105-rescue_7-3BNC117-1 B-240105-rescue_7-3BNC117-9.0-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/antibody_escape/by_selection/A-220804-rescue_1-10-1074-1/A-220804-rescue_1-10-1074-40.0-1_prob_escape.csv">A-220804-rescue_1-10-1074-1 A-220804-rescue_1-10-1074-40.0-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/antibody_escape/by_selection/A-220804-rescue_1-10-1074-1/A-220804-rescue_1-10-1074-20.0-1_prob_escape.csv">A-220804-rescue_1-10-1074-1 A-220804-rescue_1-10-1074-20.0-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/antibody_escape/by_selection/A-220804-rescue_1-10-1074-1/A-220804-rescue_1-10-1074-10.0-1_prob_escape.csv">A-220804-rescue_1-10-1074-1 A-220804-rescue_1-10-1074-10.0-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/antibody_escape/by_selection/A-220804-rescue_1-10-1074-2/A-220804-rescue_1-10-1074-20.0-2_prob_escape.csv">A-220804-rescue_1-10-1074-2 A-220804-rescue_1-10-1074-20.0-2</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/antibody_escape/by_selection/B-220912-rescue_1-10-1074-1/B-220912-rescue_1-10-1074-80.0-1_prob_escape.csv">B-220912-rescue_1-10-1074-1 B-220912-rescue_1-10-1074-80.0-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/antibody_escape/by_selection/B-220912-rescue_1-10-1074-1/B-220912-rescue_1-10-1074-40.0-1_prob_escape.csv">B-220912-rescue_1-10-1074-1 B-220912-rescue_1-10-1074-40.0-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/antibody_escape/by_selection/B-220912-rescue_1-10-1074-1/B-220912-rescue_1-10-1074-20.0-1_prob_escape.csv">B-220912-rescue_1-10-1074-1 B-220912-rescue_1-10-1074-20.0-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/antibody_escape/by_selection/B-221011-rescue_4-10-1074-1/B-221011-rescue_4-10-1074-10.0-1_prob_escape.csv">B-221011-rescue_4-10-1074-1 B-221011-rescue_4-10-1074-10.0-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/antibody_escape/by_selection/B-221011-rescue_4-10-1074-1/B-221011-rescue_4-10-1074-20.0-1_prob_escape.csv">B-221011-rescue_4-10-1074-1 B-221011-rescue_4-10-1074-20.0-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/antibody_escape/by_selection/B-221011-rescue_4-10-1074-1/B-221011-rescue_4-10-1074-40.0-1_prob_escape.csv">B-221011-rescue_4-10-1074-1 B-221011-rescue_4-10-1074-40.0-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/antibody_escape/by_selection/A-220804-rescue_1-3BNC117-1/A-220804-rescue_1-3BNC117-5.0-1_prob_escape.csv">A-220804-rescue_1-3BNC117-1 A-220804-rescue_1-3BNC117-5.0-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/antibody_escape/by_selection/A-220804-rescue_1-3BNC117-1/A-220804-rescue_1-3BNC117-2.5-1_prob_escape.csv">A-220804-rescue_1-3BNC117-1 A-220804-rescue_1-3BNC117-2.5-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/antibody_escape/by_selection/A-220804-rescue_1-3BNC117-1/A-220804-rescue_1-3BNC117-1.25-1_prob_escape.csv">A-220804-rescue_1-3BNC117-1 A-220804-rescue_1-3BNC117-1.25-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/antibody_escape/by_selection/A-221017-rescue_4-3BNC117-1/A-221017-rescue_4-3BNC117-1.0-1_prob_escape.csv">A-221017-rescue_4-3BNC117-1 A-221017-rescue_4-3BNC117-1.0-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/antibody_escape/by_selection/A-221017-rescue_4-3BNC117-1/A-221017-rescue_4-3BNC117-2.0-1_prob_escape.csv">A-221017-rescue_4-3BNC117-1 A-221017-rescue_4-3BNC117-2.0-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/antibody_escape/by_selection/A-221017-rescue_4-3BNC117-1/A-221017-rescue_4-3BNC117-3.0-1_prob_escape.csv">A-221017-rescue_4-3BNC117-1 A-221017-rescue_4-3BNC117-3.0-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/antibody_escape/by_selection/B-240105-rescue_7-3BNC117-1/B-240105-rescue_7-3BNC117-1.0-1_prob_escape.csv">B-240105-rescue_7-3BNC117-1 B-240105-rescue_7-3BNC117-1.0-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/antibody_escape/by_selection/B-240105-rescue_7-3BNC117-1/B-240105-rescue_7-3BNC117-3.0-1_prob_escape.csv">B-240105-rescue_7-3BNC117-1 B-240105-rescue_7-3BNC117-3.0-1</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/antibody_escape/by_selection/B-240105-rescue_7-3BNC117-1/B-240105-rescue_7-3BNC117-9.0-1_prob_escape.csv">B-240105-rescue_7-3BNC117-1 B-240105-rescue_7-3BNC117-9.0-1</a></li>
 </ul></details>
 
 </li>
 <li><details><summary>antibody escape CSVs (click triangle to expand/collapse)</summary><ul>
 
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/antibody_escape/averages/10-1074_mut_effect.csv">10-1074</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/antibody_escape/averages/3BNC117_mut_effect.csv">3BNC117</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/antibody_escape/averages/10-1074_mut_effect.csv">10-1074</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/antibody_escape/averages/3BNC117_mut_effect.csv">3BNC117</a></li>
 </ul></details>
 
 </li>
@@ -283,9 +283,9 @@
 <ul>
 <li><a href="htmls/all_antibodies_overlaid.html">Summary plot (escape overlaid)</a></li>
 <li><a href="htmls/all_antibodies_faceted.html">Summary plot (escape faceted)</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/summaries/all_antibodies.csv">CSV summarizing results</a></li>
-<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/results/summaries/all_antibodies_per_antibody_escape.csv">CSV summarizing per-antibody results</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/summaries/all_antibodies.csv">CSV summarizing results</a></li>
+<li><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/results/summaries/all_antibodies_per_antibody_escape.csv">CSV summarizing per-antibody results</a></li>
 </ul>
 <h2 id="additional-analysis-specific-files">Additional analysis-specific files</h2>
-<h4 id="reference-to-sequential-site-numbering-map"><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/data/site_numbering_map.csv">Reference to sequential site-numbering map</a></h4>
+<h4 id="reference-to-sequential-site-numbering-map"><a href="https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/data/site_numbering_map.csv">Reference to sequential site-numbering map</a></h4>
 <h4 id="average-functional-score-plots"><a href="notebooks/average_func_score_distributions.html">Average functional score plots</a></h4>
