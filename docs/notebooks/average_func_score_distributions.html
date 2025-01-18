@@ -7312,6 +7312,7 @@ a.anchor-link {
                     processEnvironments: true
                 },
                 displayAlign: 'center',
+                messageStyle: 'none',
                 CommonHTML: {
                     linebreaks: {
                     automatic: true
@@ -7529,18 +7530,18 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">altair</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">alt</span>
 
-<span class="kn">import</span> <span class="nn">dms_variants.codonvarianttable</span>
-<span class="kn">import</span> <span class="nn">dms_variants.utils</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">dms_variants.codonvarianttable</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">dms_variants.utils</span>
 
-<span class="kn">import</span> <span class="nn">numpy</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span>
 
-<span class="kn">import</span> <span class="nn">scipy.stats</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">scipy.stats</span>
 
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 
-<span class="kn">import</span> <span class="nn">yaml</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">yaml</span>
 </pre></div>
 </div>
 </div>
@@ -7659,7 +7660,7 @@ a.anchor-link {
     <span class="n">dms_variants</span><span class="o">.</span><span class="n">codonvarianttable</span><span class="o">.</span><span class="n">CodonVariantTable</span><span class="o">.</span><span class="n">classifyVariants</span>
 <span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">ridgeplot</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">library</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">ridgeplot</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">library</span><span class="p">):</span>
     <span class="c1"># print out func_scores and figure out if it has library</span>
 
     <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">'library==@library'</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -7793,23 +7794,23 @@ a.anchor-link {
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <style>
-  #altair-viz-02e18f18717d4f43bb0f84e2204530a2.vega-embed {
+  #altair-viz-76ea0cbc36124567a6ffad3f5b617181.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-02e18f18717d4f43bb0f84e2204530a2.vega-embed details,
-  #altair-viz-02e18f18717d4f43bb0f84e2204530a2.vega-embed details summary {
+  #altair-viz-76ea0cbc36124567a6ffad3f5b617181.vega-embed details,
+  #altair-viz-76ea0cbc36124567a6ffad3f5b617181.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-02e18f18717d4f43bb0f84e2204530a2"></div>
+<div id="altair-viz-76ea0cbc36124567a6ffad3f5b617181"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-02e18f18717d4f43bb0f84e2204530a2") {
-      outputDiv = document.getElementById("altair-viz-02e18f18717d4f43bb0f84e2204530a2");
+    if (outputDiv.id !== "altair-viz-76ea0cbc36124567a6ffad3f5b617181") {
+      outputDiv = document.getElementById("altair-viz-76ea0cbc36124567a6ffad3f5b617181");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -7883,23 +7884,23 @@ a.anchor-link {
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <style>
-  #altair-viz-739fc1e0388f46b3bdb268e95da3efae.vega-embed {
+  #altair-viz-a1b8761f349947ab89178183a0cca5b8.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-739fc1e0388f46b3bdb268e95da3efae.vega-embed details,
-  #altair-viz-739fc1e0388f46b3bdb268e95da3efae.vega-embed details summary {
+  #altair-viz-a1b8761f349947ab89178183a0cca5b8.vega-embed details,
+  #altair-viz-a1b8761f349947ab89178183a0cca5b8.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-739fc1e0388f46b3bdb268e95da3efae"></div>
+<div id="altair-viz-a1b8761f349947ab89178183a0cca5b8"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-739fc1e0388f46b3bdb268e95da3efae") {
-      outputDiv = document.getElementById("altair-viz-739fc1e0388f46b3bdb268e95da3efae");
+    if (outputDiv.id !== "altair-viz-a1b8761f349947ab89178183a0cca5b8") {
+      outputDiv = document.getElementById("altair-viz-a1b8761f349947ab89178183a0cca5b8");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",

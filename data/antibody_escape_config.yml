@@ -103,21 +103,6 @@ escape_plot_kwargs_default: &escape_plot_kwargs_default
       - 30
       - 702
 
-escape_plot_kwargs_mean: &escape_plot_kwargs_mean
-  addtl_slider_stats:
-    times_seen: 3
-  addtl_tooltip_stats:
-    - sequential_site
-  heatmap_max_at_least: 2
-  heatmap_min_at_least: -2
-  init_floor_at_zero: false
-  init_site_statistic: mean
-  site_zoom_bar_color_col: region  # supplied in `site_numbering_map`
-  sites_to_show: 
-    include_range: 
-      - 30
-      - 702
-
 # Specify any statistics (usually functional effects) for which you want to enable
 # sliders that hide data. Keyed by statistic name, then next dict gives:
 #   - `csv`: CSV file with the data, should have columns "site" and "mutant"
@@ -230,46 +215,12 @@ antibody_selections:
       A-221017-rescue_4-3BNC117-3.0-1:
         concentration: 3.0
         use_in_fit: true
-  # B-220912-rescue_1-3BNC117-1:
-  #   neut_standard_name: neut_standard
-  #   prob_escape_filters: *prob_escape_filters_default
-  #   polyclonal_params: *polyclonal_params_default
-  #   escape_plot_kwargs: *escape_plot_kwargs_default
-  #   plot_hide_stats: *plot_hide_stats_default
-  #   no_antibody_sample: B-220912-rescue_1-no_antibody-1
-  #   antibody_samples:
-  #     B-220912-rescue_1-3BNC117-40.0-1:
-  #       concentration: 40.0
-  #       use_in_fit: false
-  #     B-220912-rescue_1-3BNC117-20.0-1:
-  #       concentration: 20.0
-  #       use_in_fit: false
-  #     B-220912-rescue_1-3BNC117-10.0-1:
-  #       concentration: 10.0
-  #       use_in_fit: false
-  #B-221011-rescue_4-3BNC117-1:
-  #  neut_standard_name: neut_standard
-  #  prob_escape_filters: *prob_escape_filters_default
-   # polyclonal_params: *polyclonal_params_default
-   # escape_plot_kwargs: *escape_plot_kwargs_default
-   # plot_hide_stats: *plot_hide_stats_default
-   # no_antibody_sample: B-221011-rescue_4-no_antibody-1
-   # antibody_samples:
-   #   B-221011-rescue_4-3BNC117-5.0-1:
-   #     concentration: 5.0
-   #     use_in_fit: false
-   #   B-221011-rescue_4-3BNC117-7.5-1:
-   #     concentration: 7.5
-   #     use_in_fit: false
-   #   B-221011-rescue_4-3BNC117-10.0-1:
-   #     concentration: 10.0
-   #     use_in_fit: false
 
   B-240105-rescue_7-3BNC117-1:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
     polyclonal_params: *polyclonal_params_default
-    escape_plot_kwargs: *escape_plot_kwargs_mean
+    escape_plot_kwargs: *escape_plot_kwargs_default
     plot_hide_stats: *plot_hide_stats_default
     no_antibody_sample: B-240105-rescue_7-no_antibody-1
     antibody_samples:
@@ -294,7 +245,6 @@ antibody_selections:
 #   - `escape_plot_kwargs`: keyword arguments for `PolyclonalAverage.mut_escape_plot`
 #   - `plot_hide_stats`: dict giving data frames with stats for slider to hide mutations
 #   - `title`: title of plots
-#   - `legend`: legend added to plots
 
 # Define defaults for each antibody/serum, used via the merge (<<) operator
 avg_antibody_escape_default: &avg_antibody_escape_default
@@ -308,38 +258,6 @@ avg_antibody_escape_default: &avg_antibody_escape_default
     avg_type: median
     per_model_tooltip: true
   plot_hide_stats: *plot_hide_stats_default
-  legend: |
-    Interactive plot of how mutations affect antibody escape.
-
-    Use the site zoom bar at the top to zoom in on specific sites. The line plot shows a summary statistic indicating escape at each site. The heat map shows escape for individual mutations, with parental amino-acid identities indicated by x and gray indicating non-measured mutations. Mouse over points for details.
-
-    Options at the bottom of the plot let you modify the display, such as by selecting how many different variants a mutation must be seen in to be shown (*minimum times_seen*), how many different experimental selections the mutation was measured in (*minimum n_models*), what site summary statistic to show, etc.
-
-    You can filter by the functional effects of mutations. Mutations removed by this filter are shown as dark gray squares in the heat map to distinguish unmeasured mutations from ones measured to be deleterious.
-
-    The minimum max of escape at site is useful to select the sites where mutations confer the most escape.
-
-avg_antibody_escape_stalk: &avg_antibody_escape_stalk
-  icXX: 50
-  escape_plot_kwargs:
-    <<: *escape_plot_kwargs_mean
-    avg_type: median
-    per_model_tooltip: true
-    addtl_slider_stats:
-      times_seen: 3
-      escape_std: 2
-    addtl_slider_stats_as_max: [escape_std]
-  plot_hide_stats: *plot_hide_stats_default
-  legend: |
-    Interactive plot of how mutations affect antibody escape.
-
-    Use the site zoom bar at the top to zoom in on specific sites. The line plot shows a summary statistic indicating escape at each site. The heat map shows escape for individual mutations, with parental amino-acid identities indicated by x and gray indicating non-measured mutations. Mouse over points for details.
-
-    Options at the bottom of the plot let you modify the display, such as by selecting how many different variants a mutation must be seen in to be shown (*minimum times_seen*), how many different experimental selections the mutation was measured in (*minimum n_models*), what site summary statistic to show, etc.
-
-    You can filter by the functional effects of mutations. Mutations removed by this filter are shown as dark gray squares in the heat map to distinguish unmeasured mutations from ones measured to be deleterious.
-
-    The minimum max of escape at site is useful to select the sites where mutations confer the most escape.
 
 # Define the antibodies/sera to average
 
@@ -358,8 +276,6 @@ avg_antibody_escape:
     selections:
       - A-220804-rescue_1-3BNC117-1
       - A-221017-rescue_4-3BNC117-1
-#      - B-220912-rescue_1-3BNC117-1
-#      - B-221011-rescue_4-3BNC117-1
       - B-240105-rescue_7-3BNC117-1
 
 # --------------------------------------------------------------------------------------
