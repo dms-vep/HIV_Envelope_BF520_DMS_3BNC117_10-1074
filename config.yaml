@@ -21,7 +21,7 @@ github_repo_url: https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-10
 # and should not be needed for other pipelines.
 github_blob_url: https://github.com/dms-vep/HIV_Envelope_BF520_DMS_3BNC117_10-1074/blob/main/
 # Some descriptions and metadata about the analysis.
-description: Deep mutational scanning using HIV Envelope strain BF520 to identify mutations that escape neutralization by antibodies 3BNC117 and 10-1074
+description: Deep mutational scanning using HIV Envelopes BF520 and TRO11 to identify mutations that escape neutralization by antibodies 3BNC117 and 10-1074
 year: 2024
 authors: Caelan Radford and Jesse Bloom
 

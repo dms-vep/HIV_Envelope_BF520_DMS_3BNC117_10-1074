@@ -1,8 +1,10 @@
-# Deep mutational scanning using HIV Envelope strain BF520 to identify mutations that escape neutralization by antibodies 3BNC117 and 10-1074
+# Deep mutational scanning using HIV Envelopes TRO11 and BF520 to identify mutations that escape neutralization by antibodies 3BNC117 and 10-1074
 
-For documentation of the analysis, see [https://dms-vep.github.io/HIV_Envelope_BF520_DMS_3BNC117_10-1074/](https://dms-vep.github.io/HIV_Envelope_BF520_DMS_3BNC117_10-1074/).
+For documentation of the analysis, see [https://dms-vep.github.io/HIV_Envelope_BF520_DMS_3BNC117_10-1074/](https://dms-vep.github.io/HIV_Envelope_BF520_DMS_3BNC117_10-1074/) and [https://dms-vep.github.io/HIV_Envelope_TRO11_DMS_3BNC117_10-1074/](https://dms-vep.github.io/HIV_Envelope_TRO11_DMS_3BNC117_10-1074/). 
 
 ## Organization of this repo
+
+This repository is meant to be run in the same directory as [https://dms-vep.github.io/HIV_Envelope_TRO11_DMS_3BNC117_10-1074/](https://dms-vep.github.io/HIV_Envelope_TRO11_DMS_3BNC117_10-1074/) . This analysis should be run by following the instructions in this README before running the analysis in the other repository.
 
 ### `dms-vep-pipeline-3` submodule
 
@@ -29,6 +31,7 @@ Additional scripts and notebooks that are specific to this analysis and not part
 Input data for the pipeline are in [./data/](data).
 
 ### Results and documentation
+
 The results of running the pipeline are placed in [./results/](results).
 Only some of these results are tracked to save space (see [.gitignore](.gitignore)).
 
