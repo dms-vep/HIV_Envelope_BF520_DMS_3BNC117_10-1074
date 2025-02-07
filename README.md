@@ -1,5 +1,7 @@
 # Deep mutational scanning using HIV Envelopes TRO11 and BF520 to identify mutations that escape neutralization by antibodies 3BNC117 and 10-1074
 
+Study by Caelan Radford and Jesse Bloom. See the pre-print [here](https://www.biorxiv.org/content/10.1101/2025.01.30.635715v1).
+
 For documentation of the analysis, see [https://dms-vep.github.io/HIV_Envelope_BF520_DMS_3BNC117_10-1074/](https://dms-vep.github.io/HIV_Envelope_BF520_DMS_3BNC117_10-1074/) and [https://dms-vep.github.io/HIV_Envelope_TRO11_DMS_3BNC117_10-1074/](https://dms-vep.github.io/HIV_Envelope_TRO11_DMS_3BNC117_10-1074/). 
 
 ## Organization of this repo
